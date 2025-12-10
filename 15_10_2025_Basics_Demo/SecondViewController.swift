@@ -9,31 +9,55 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
-    
     @IBOutlet weak var btnOne: UIButton!
-    
     @IBOutlet weak var btnTwo: UIButton!
-    
     @IBOutlet weak var btnThree: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
        
     }
     
-    
-    @IBAction func btnOneClicked(_ sender: Any) {
-        print("Btn one clicked")
-    }
-    
-    @IBAction func btnTwoClicked(_ sender: Any) {
-        print("Btn two clicked")
-    }
-    
-    @IBAction func btnThreeClicked(_ sender: Any) {
+    @IBAction func btnClicked(_ sender: UIButton) {
         
-        print("Btn three clicked")
+        //tag attribute of UIButton
+        switch sender.tag{
+            case 1 :
+                print("Button 1 clicked")
+            case 2 :
+                print("Button 2 clicked")
+            case 3 :
+                print("Button 3 clicked")
+            default:
+                print("No case matched")
+        }
+        
+//        if sender.backgroundColor == .yellow{
+//            print("Button 3 clicked")
+//        }else if sender.backgroundColor == .orange{
+//            print("Button 2 clicked")
+//        }else{
+//            print("Button 3 clicked")
+//        }
+        
+//        switch sender.titleLabel?.text{
+//            case "Button 1" :
+//                print("Button 1 clicked")
+//            case "Button 2":
+//                print("Button 2 clicked")
+//            case "Button 3":
+//                print("Button 3 clicked")
+//            default:
+//                print("Default case executed")
+//        }
+        
+//        if sender.titleLabel?.text == "Button 1"{
+//            print("Button 1 clicked")
+//        }else if sender.titleLabel!.text == "Button 2"{
+//            print("Button 2 clicked")
+//        }else{
+//            print("Button 3 clicked")
+//        }
     }
-    
-
 }
